@@ -6,7 +6,7 @@ Emmet шпаргалка
 
 
 
-/**
+
  *  Emmet plugin for "textarea".
  *
  * @package Monstra
@@ -14,7 +14,7 @@ Emmet шпаргалка
  * @author Sobchenyuk Andrey / ANDREY
  * @copyright 2016 Sobchenyuk Andrey / ANDREY
  * @version 1.0.2
- *
- */
+ 
+
 
  
