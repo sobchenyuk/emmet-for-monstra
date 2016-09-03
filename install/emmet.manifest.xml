@@ -2,7 +2,7 @@
 <root>
     <plugin_location>plugins/emmet/emmet.plugin.php</plugin_location>
     <plugin_status>active</plugin_status>
-    <plugin_priority>20</plugin_priority>
+    <plugin_priority>15</plugin_priority>
     <plugin_name>Emmet</plugin_name>
     <plugin_description>Emmet plugin for "textarea".</plugin_description>
     <plugin_version>1.0.3</plugin_version>
