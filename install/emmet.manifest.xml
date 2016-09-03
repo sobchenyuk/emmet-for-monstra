@@ -5,7 +5,7 @@
     <plugin_priority>20</plugin_priority>
     <plugin_name>Emmet</plugin_name>
     <plugin_description>Emmet plugin for "textarea".</plugin_description>
-    <plugin_version>1.0.2</plugin_version>
+    <plugin_version>1.0.3</plugin_version>
     <plugin_author>Sobchenyuk</plugin_author>
     <plugin_author_uri>https://vk.com/sobcheniuk</plugin_author_uri>
 </root>
