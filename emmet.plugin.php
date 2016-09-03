@@ -7,7 +7,7 @@
  * @subpackage Plugins
  * @author Sobchenyuk Andrey / ANDREY
  * @copyright 2016 Sobchenyuk Andrey / ANDREY
- * @version 1.0.2
+ * @version 1.0.3
  *
  */
 
@@ -16,7 +16,7 @@
 Plugin::register(__FILE__,
     __('Emmet'),
     __('Emmet plugin for "textarea".'),
-    '1.0.2',
+    '1.0.3',
     'Sobchenyuk',
     'https://vk.com/sobcheniuk');
 
@@ -33,7 +33,11 @@ class Emmet
     public static function EmmetJs()
     {
 
-        echo '<script type="text/javascript" src="' . Option::get('siteurl') . '/plugins/emmet/lib/emmet.min.js"></script>';
+        echo '
+        <link href="' . Option::get('siteurl') . '/plugins/emmet/lib/jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+        <script src="' . Option::get('siteurl') . '/plugins/emmet/lib/jquery-linedtextarea.js"></script>
+        <script src="' . Option::get('siteurl') . '/plugins/emmet/lib/emmet.min.js"></script>
+        ';
     }
 
     public static function EmmetScript()
@@ -41,9 +45,13 @@ class Emmet
 
         if (Request::get('action') == 'add_styles') {
             echo '<script>
+
 $(document).ready(function() {
-        $("textarea#content").addClass("emmet-syntax-css").css("display","block");
+        $("textarea#content").addClass("emmet-syntax-css lined").css("display","block");
         $(".CodeMirror.cm-s-mdn-like").css("display","none");
+        $(".source-editor.emmet-syntax-css.lined").linedtextarea(
+		{selectedLine: 1}
+	    );
          });
          
          require([\'stylesheet\', \'events\'], function(stylesheet, events){
